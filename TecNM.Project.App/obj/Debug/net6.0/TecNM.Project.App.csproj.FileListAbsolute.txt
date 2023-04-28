@@ -18,11 +18,6 @@ C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\bin\Debug\net6.0\Swashbuckle.A
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\bin\Debug\net6.0\TecNM.Project.Core.dll
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\bin\Debug\net6.0\TecNM.Project.Core.pdb
-C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\staticwebassets\msbuild.TecNM.Project.App.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\staticwebassets\msbuild.build.TecNM.Project.App.props
-C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TecNM.Project.App.props
-C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TecNM.Project.App.props
-C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\scopedcss\bundle\TecNM.Project.App.styles.css
@@ -32,3 +27,6 @@ C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\refint\TecNM.
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\TecNM.Project.App.pdb
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\TecNM.Project.App.genruntimeconfig.cache
 C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\obj\Debug\net6.0\ref\TecNM.Project.App.dll
+C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\bin\Debug\net6.0\Dapper.dll
+C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\bin\Debug\net6.0\Dapper.Contrib.dll
+C:\Users\sketc\RiderProjects\P1\TecNM.Project.App\bin\Debug\net6.0\MySqlConnector.dll

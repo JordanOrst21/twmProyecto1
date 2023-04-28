@@ -38,6 +38,12 @@ public class InMemoryArticleCategoryRepository : IArticleCategoryRepository
         _categories.RemoveAll(x => x.Id == id);
         return true;
     }
+
+    public Task<bool> ArticleCategoryExist(int id)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<ArticleCategory> GetById(int id)
     {
         var category = _categories.FirstOrDefault(x => x.Id == id);
