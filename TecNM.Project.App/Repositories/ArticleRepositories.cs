@@ -1,3 +1,6 @@
+using Dapper;
+using Dapper.Contrib.Extensions;
+using TecNM.Project.App.DataAccess.Interfaces;
 using TecNM.Project.App.Repositories.Interfaces;
 using TecNM.Project.Core.Entities;
 
@@ -5,28 +8,52 @@ namespace TecNM.Project.App.Repositories;
 
 public class ArticleRepositories : IArticleRepository
 {
-    public Task<Article> SaveAsync(Article category)
-    {
-        throw new NotImplementedException();
-    }
+    private readonly IDbContext _dbContext;
 
-    public Task<Article> UpdateAsync(Article category)
+    public ArticleRepositories(IDbContext context)
     {
-        throw new NotImplementedException();
+        _dbContext = context;
     }
-
-    public Task<List<Article>> GetAllAsync()
+    public async Task<Article> SaveAsync(Article category)
     {
-        throw new NotImplementedException();
+        category.Id = await _dbContext.Connection.InsertAsync(category);
+        //throw new NotImplementedException();
+        return category;
     }
-
-    public Task<bool> DeleteAsync(int id)
+    public async Task<Article> UpdateAsync(Article category)
     {
-        throw new NotImplementedException();
+        await _dbContext.Connection.UpdateAsync(category);
+
+        return category;   
     }
-
-    public Task<Article> GetById(int id)
+    public async Task<List<Article>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        const string sql = "SELECT * FROM article WHERE IsDeleted = 0";
+
+        var categories = await _dbContext.Connection.QueryAsync<Article>(sql);
+        return categories.ToList();
+    }
+    public async Task<bool> DeleteAsync(int id)
+    {
+        var category = await GetById(id);
+        //throw new NotImplementedException();
+
+        if (category == null)
+        {
+            return false;
+        }
+
+        category.IsDeleted = true;
+
+        return await _dbContext.Connection.UpdateAsync(category);
+    }
+    public async Task<Article> GetById(int id)
+    {
+        var category = await _dbContext.Connection.GetAsync<Article>(id);
+
+        if (category == null)
+            return null;
+
+        return category.IsDeleted == true ? null : category;
     }
 }

@@ -6,7 +6,6 @@ namespace TecNM.Project.App.Repositories;
 public class InMemoryArticleRepository : IArticleRepository
 {
     private readonly List<Article> _categories;
-
     public InMemoryArticleRepository()
     {
         _categories = new List<Article>();
@@ -18,7 +17,6 @@ public class InMemoryArticleRepository : IArticleRepository
 
         return category;
     }
-    
     public async Task<Article> UpdateAsync(Article category)
     {
         var index = _categories.FindIndex(x => x.Id == category.Id);
@@ -27,12 +25,10 @@ public class InMemoryArticleRepository : IArticleRepository
             _categories[index] = category;
         return await Task.FromResult(category);
     }
-    
     public async Task<List<Article>> GetAllAsync()
     {
         return _categories;
     }
-    
     public async Task<bool> DeleteAsync(int id)
     {
         _categories.RemoveAll(x => x.Id == id);
